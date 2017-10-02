@@ -20,13 +20,14 @@ public class Method_03_Test {
         // TODO créer une méthode statique IDao getDefaultInstance()
         // TODO cette méthode retourne une instance de la classe DaoA
         static DaoA getDefaultInstance() {
-        	return new DaoA();
+        	Method_03_Test m = new Method_03_Test();
+        	return m.new DaoA();
        	
         }
     }
     // end::IDao[]
 
-    static class DaoA implements IDao {
+    class DaoA implements IDao {
 
         List<Person> people = Data.buildPersonList(20);
 
